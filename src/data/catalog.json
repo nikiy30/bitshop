@@ -1,0 +1,85 @@
+{
+  "catalogItems": [
+    {
+      "id": 1,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": true,
+      "bestSeller": true
+    },
+    {
+      "id": 2,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": false,
+      "bestSeller": false
+    },
+    {
+      "id": 3,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": true,
+      "bestSeller": false
+    },
+    {
+      "id": 4,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": true,
+      "bestSeller": false
+    },
+    {
+      "id": 5,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": true,
+      "bestSeller": false
+    },
+    {
+      "id": 6,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": true,
+      "bestSeller": false
+    },
+    {
+      "id": 7,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": true,
+      "bestSeller": false
+    },
+    {
+      "id": 8,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": true,
+      "bestSeller": true
+    },
+    {
+      "id": 9,
+      "image": "",
+      "title": "Champion",
+      "price": "$500",
+      "rating": 5,
+      "bitPrime": true,
+      "bestSeller": true
+    }
+  ]
+}
