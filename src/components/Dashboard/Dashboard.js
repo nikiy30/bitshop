@@ -18,10 +18,13 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import { mainListItems, secondaryListItems } from "./listItems";
-import Chart from "../Chart";
-import Deposits from "./Deposits";
-import Orders from "./Orders";
+import {
+  mainListItems,
+  secondaryListItems
+} from "../../components/ListItems/ListItems";
+import Chart from "../Chart/Chart";
+import Deposits from "../Deposit/Deposit";
+import Orders from "../Orders/Orders";
 
 const drawerWidth = 240;
 
@@ -104,7 +107,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export function Dashboard() {
+export function DashBoard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -191,13 +194,10 @@ export function Dashboard() {
               </Paper>
             </Grid>
           </Grid>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
         </Container>
       </main>
     </div>
   );
 }
 
-export default Dashboard;
+export default DashBoard;

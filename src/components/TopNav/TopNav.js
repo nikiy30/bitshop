@@ -235,22 +235,6 @@ export function TopNav() {
               <Link
                 variant="button"
                 color="textPrimary"
-                to="/bitwoker"
-                className={classes.link}
-              >
-                BitWorker
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                to="/catalog"
-                className={classes.link}
-              >
-                BitCoder
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
                 to="/pricing"
                 className={classes.link}
               >
