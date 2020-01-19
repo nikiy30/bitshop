@@ -1,7 +1,7 @@
 package httpClient
 
 import (
-	"Backend/httpClient/responseHandlers"
+	"bitshop/tea/httpClient/responseHandlers"
 	"fmt"
 	"log"
 	"net/http"

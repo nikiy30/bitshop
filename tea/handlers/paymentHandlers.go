@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"Backend/coin"
-	"Backend/db"
-	"Backend/httpClient"
+	"bitshop/tea/coin"
+	"bitshop/tea/db"
+	"bitshop/tea/httpClient"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
