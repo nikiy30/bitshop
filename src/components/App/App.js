@@ -19,6 +19,7 @@ import { BitPrime } from "../../Pages/BitPrime/BitPrime";
 import { AtmFinder } from "../../Pages/AtmFinder/AtmFinder";
 import Pricing from "../../Pages/Pricing/Pricing";
 import Landing from "../../Pages/Landing/Landing";
+import Home from "../../Pages/Home/Home";
 
 function SwitchRoutes() {
   return (
@@ -30,6 +31,7 @@ function SwitchRoutes() {
       <Route exact path="/bit-prime" component={BitPrime} />
       <Route exact path="/atm-finder" component={AtmFinder} />
       <Route exact path="/checkout" component={Checkout} />
+      <Route exact path="/home" component={Home} />
       <Route path="/catalog" component={Catalog} />
       <Route path="/pricing" component={Pricing} />
     </Switch>

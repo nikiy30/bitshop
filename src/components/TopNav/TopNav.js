@@ -17,7 +17,6 @@ import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
@@ -100,16 +99,16 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const sections = [
-  { title: "Appliances", url: "#" },
-  { title: "Apps & Games", url: "#" },
-  { title: "Beauty", url: "#" },
-  { title: "Books", url: "#" },
-  { title: "Clothing", url: "#" },
-  { title: "Computers", url: "#" },
-  { title: "Courses", url: "#" },
-  { title: "Electronics", url: "#" },
-  { title: "Home & Kitchen", url: "#" },
-  { title: "Office Supplies", url: "#" }
+  { title: "Appliances", url: "/catalog" },
+  { title: "Apps & Games", url: "/catalog" },
+  { title: "Beauty", url: "/catalog" },
+  { title: "Books", url: "/catalog" },
+  { title: "Clothing", url: "/catalog" },
+  { title: "Computers", url: "/catalog" },
+  { title: "Courses", url: "/catalog" },
+  { title: "Electronics", url: "/catalog" },
+  { title: "Home & Kitchen", url: "/catalog" },
+  { title: "Office Supplies", url: "/catalog" }
 ];
 
 export function TopNav() {
@@ -197,15 +196,18 @@ export function TopNav() {
   return (
     <div className={classes.grow}>
       <AppBar className={classes.root} position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <HomeIcon />
-          </IconButton>
+        <Toolbar className={classes.link}>
+          <Link to="/home" className={classes.link}>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="open drawer"
+            >
+              <HomeIcon />
+            </IconButton>
+          </Link>
+
           <Link to="/landing" className={classes.link}>
             {" "}
             <Typography className={classes.title} variant="h6" noWrap>
@@ -233,7 +235,7 @@ export function TopNav() {
               <Link
                 variant="button"
                 color="textPrimary"
-                to="/catalog"
+                to="/bitwoker"
                 className={classes.link}
               >
                 BitWorker
@@ -244,7 +246,7 @@ export function TopNav() {
                 to="/catalog"
                 className={classes.link}
               >
-                Bit Coder
+                BitCoder
               </Link>
               <Link
                 variant="button"
@@ -253,14 +255,6 @@ export function TopNav() {
                 className={classes.link}
               >
                 Enterprise
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="#"
-                className={classes.link}
-              >
-                Support
               </Link>
             </nav>
             <Link to="/checkout" variant="button" className={classes.link}>
