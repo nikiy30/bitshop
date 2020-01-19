@@ -12,6 +12,7 @@ import Avatar from "../Avatar/Avatar";
  */
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
+import HomeIcon from "@material-ui/icons/Home";
 import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -21,6 +22,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import Header from "../Header/Header";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -97,6 +99,19 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const sections = [
+  { title: "Appliances", url: "#" },
+  { title: "Apps & Games", url: "#" },
+  { title: "Beauty", url: "#" },
+  { title: "Books", url: "#" },
+  { title: "Clothing", url: "#" },
+  { title: "Computers", url: "#" },
+  { title: "Courses", url: "#" },
+  { title: "Electronics", url: "#" },
+  { title: "Home & Kitchen", url: "#" },
+  { title: "Office Supplies", url: "#" }
+];
+
 export function TopNav() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -140,39 +155,43 @@ export function TopNav() {
 
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
-    <Menu
-      className={classes.root}
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <ShoppingCartIcon />
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <Avatar />
-        <p>Profile</p>
-      </MenuItem>
-      <ShoppingCartIcon />
-    </Menu>
+    <>
+      <Header title="Blog" sections={sections} />
+      <Menu
+        className={classes.root}
+        anchorEl={mobileMoreAnchorEl}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        id={mobileMenuId}
+        keepMounted
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        open={isMobileMenuOpen}
+        onClose={handleMobileMenuClose}
+      >
+        <MenuItem>
+          <p>Messages</p>
+        </MenuItem>
+        <MenuItem>
+          <IconButton aria-label="show 11 new notifications" color="inherit">
+            <Badge badgeContent={11} color="secondary">
+              <NotificationsIcon />
+            </Badge>
+          </IconButton>
+          <p>Notifications</p>
+        </MenuItem>
+        <MenuItem>
+          <IconButton aria-label="show 11 new notifications" color="inherit">
+            <ShoppingCartIcon />
+          </IconButton>
+          <p>Notifications</p>
+        </MenuItem>
+        <MenuItem onClick={handleProfileMenuOpen}>
+          <Avatar />
+          <p>Profile</p>
+        </MenuItem>
+        <ShoppingCartIcon />
+        <Header title="Blog" sections={sections} />
+      </Menu>
+    </>
   );
 
   return (
@@ -185,7 +204,7 @@ export function TopNav() {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <HomeIcon />
           </IconButton>
           <Link to="/landing" className={classes.link}>
             {" "}
@@ -217,7 +236,15 @@ export function TopNav() {
                 to="/catalog"
                 className={classes.link}
               >
-                Catalog
+                BitWorker
+              </Link>
+              <Link
+                variant="button"
+                color="textPrimary"
+                to="/catalog"
+                className={classes.link}
+              >
+                Bit Coder
               </Link>
               <Link
                 variant="button"

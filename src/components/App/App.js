@@ -41,7 +41,6 @@ function App() {
     <Router>
       <div className="App">
         <TopNav />
-        <SideSheet />
         <SwitchRoutes />
         <Footer />
       </div>
