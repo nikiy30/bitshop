@@ -1,7 +1,7 @@
 package api
 
 import (
-	"bitshop/tea/handlers"
+	"bitshop/backend/handlers"
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"

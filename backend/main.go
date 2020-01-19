@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bitshop/tea/api"
+	"bitshop/backend/api"
 )
 
 func main() {
