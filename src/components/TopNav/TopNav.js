@@ -20,10 +20,12 @@ import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 const useStyles = makeStyles(theme => ({
   grow: {
-    flexGrow: 1
+    flexGrow: 1,
+    backgroundColor: "#232F3E"
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -146,6 +148,12 @@ export function TopNav() {
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
+      <MenuItem>
+        <IconButton aria-label="show 11 new notifications" color="inherit">
+          <ShoppingCartIcon />
+        </IconButton>
+        <p>Notifications</p>
+      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -157,6 +165,7 @@ export function TopNav() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
+      <ShoppingCartIcon />
     </Menu>
   );
 
@@ -191,6 +200,11 @@ export function TopNav() {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+            <IconButton aria-label="show 4 new mails" color="inherit">
+              <Badge badgeContent={4} color="secondary">
+                <ShoppingCartIcon />
+              </Badge>
+            </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
