@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
+import { Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
@@ -8,6 +8,9 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     backgroundColor: "#232F3E",
     padding: "25px"
+  },
+  second: {
+    backgroundColor: "#37475a"
   },
   paper: {
     padding: theme.spacing(2),
@@ -20,31 +23,33 @@ export function Footer() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=12</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
+    <>
+      <Grid className={classes.second} item xs={12}>
+        <Typography className={classes.paper}>xs=12</Typography>
       </Grid>
-    </div>
+      <div className={classes.root}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <Typography className={classes.paper}>xs=12 sm=6</Typography>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography className={classes.paper}>xs=12 sm=6</Typography>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <Typography className={classes.paper}>xs=6 sm=3</Typography>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <Typography className={classes.paper}>xs=6 sm=3</Typography>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <Typography className={classes.paper}>xs=6 sm=3</Typography>
+          </Grid>
+          <Grid item xs={6} sm={3}>
+            <Typography className={classes.paper}>xs=6 sm=3</Typography>
+          </Grid>
+        </Grid>
+      </div>
+    </>
   );
 }
 

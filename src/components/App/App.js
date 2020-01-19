@@ -9,6 +9,7 @@ import TopNav from "../TopNav/TopNav";
 import Catalog from "../Catalog/Catalog";
 import SideSheet from "../SideSheet/SideSheet";
 import Footer from "../Footer/Footer";
+import Checkout from "../../Pages/Checkout/Checkout";
 /**
  * Pages
  */
@@ -26,6 +27,7 @@ function SwitchRoutes() {
       <Route exact path="/bitcoin-prices" component={BitcoinPrices} />
       <Route exact path="/bit-prime" component={BitPrime} />
       <Route exact path="/atm-finder" component={AtmFinder} />
+      <Route path="/checkout" component={Checkout} />
     </Switch>
   );
 }
@@ -37,9 +39,6 @@ function App() {
         <TopNav />
         <SideSheet />
         <SwitchRoutes />
-        <Box p={7}>
-          <Catalog />
-        </Box>
         <Footer />
       </div>
     </Router>

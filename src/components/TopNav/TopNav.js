@@ -23,9 +23,12 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    backgroundColor: "#232F3E",
+    color: "white"
+  },
   grow: {
-    flexGrow: 1,
-    backgroundColor: "#232F3E"
+    flexGrow: 1
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -129,6 +132,7 @@ export function TopNav() {
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
     <Menu
+      className={classes.root}
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={mobileMenuId}
@@ -171,7 +175,7 @@ export function TopNav() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar className={classes.root} position="static">
         <Toolbar>
           <IconButton
             edge="start"
@@ -200,11 +204,14 @@ export function TopNav() {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
+            <Link to="/checkout">
+              <IconButton aria-label="show 4 new mails" color="inherit">
+                <Badge badgeContent={4} color="secondary">
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+            </Link>
+
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
