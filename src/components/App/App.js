@@ -18,11 +18,13 @@ import { BitcoinPrices } from "../../Pages/BitcoinPrices/BitcoinPrices";
 import { BitPrime } from "../../Pages/BitPrime/BitPrime";
 import { AtmFinder } from "../../Pages/AtmFinder/AtmFinder";
 import Pricing from "../../Pages/Pricing/Pricing";
+import Landing from "../../Pages/Landing/Landing";
 
 function SwitchRoutes() {
   return (
     <Switch>
       {/* Pages */}
+      <Route exact path="/landing" component={Landing} />
       <Route exact path="/bitworker" component={BitWorker} />
       <Route exact path="/bitcoin-prices" component={BitcoinPrices} />
       <Route exact path="/bit-prime" component={BitPrime} />

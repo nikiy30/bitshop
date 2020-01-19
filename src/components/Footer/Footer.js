@@ -66,7 +66,7 @@ export function Footer() {
 
   return (
     <>
-      <Grid className={classes.second} item xs={12}>
+      <Grid className={classes.second} item xs={12} p={5}>
         <Typography className={classes.paper}>Back to top</Typography>
       </Grid>
       <div className={classes.root}>

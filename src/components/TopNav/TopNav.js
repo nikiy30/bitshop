@@ -187,9 +187,13 @@ export function TopNav() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            BitShop
-          </Typography>
+          <Link to="/landing" className={classes.link}>
+            {" "}
+            <Typography className={classes.title} variant="h6" noWrap>
+              BitShop
+            </Typography>
+          </Link>
+
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />

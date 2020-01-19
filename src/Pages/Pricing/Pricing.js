@@ -170,9 +170,8 @@ export default function Pricing() {
           color="textSecondary"
           component="p"
         >
-          Quickly build an effective pricing table for your potential customers
-          with this layout. It&apos;s built with default Material-UI components
-          with little customization.
+          Welcome to your one stop Bitcoin experience! You can earn, spend and
+          play all with Bitcoin without ever having to leave your home.
         </Typography>
       </Container>
       {/* End hero unit */}
