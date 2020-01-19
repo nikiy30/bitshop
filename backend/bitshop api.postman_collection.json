@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "d7e89e1c-2ea5-4673-b74d-cf9f86e4662b",
+		"name": "bitshop api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"walletAddress\": \"13aQyQVHJVc8k3e4G6W8iPQ32eRwLysK4j\",\n    \"walletContents\": {\n        \"guid\": \"e1fc24fb-aa07-4139-ac3c-ff4987ff99c4\",\n        \"password\": \"StrongWom@n\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/bithub/user/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bithub",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bithub/user/payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"walletOwnerAddress\": \"13aQyQVHJVc8k3e4G6W8iPQ32eRwLysK4j\",\n\t\"amount\": 56.50,\n\t\"to\": \"bc1qg7v7pcclruk6ntf7dc9csvcqkpqrdz99lxq4sd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/bithub/user/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bithub",
+						"user",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
