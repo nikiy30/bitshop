@@ -1,15 +1,14 @@
 import React from "react";
 import "./App.css";
-import Box from "@material-ui/core/Box";
 
 /**
  * Components
  */
 import TopNav from "../TopNav/TopNav";
-import Catalog from "../Catalog/Catalog";
 import SideSheet from "../SideSheet/SideSheet";
 import Footer from "../Footer/Footer";
 import Checkout from "../../Pages/Checkout/Checkout";
+import Catalog from "../Catalog/Catalog";
 /**
  * Pages
  */
@@ -18,6 +17,7 @@ import { BitWorker } from "../../Pages/BitWorker/BitWorker";
 import { BitcoinPrices } from "../../Pages/BitcoinPrices/BitcoinPrices";
 import { BitPrime } from "../../Pages/BitPrime/BitPrime";
 import { AtmFinder } from "../../Pages/AtmFinder/AtmFinder";
+import Pricing from "../../Pages/Pricing/Pricing";
 
 function SwitchRoutes() {
   return (
@@ -27,7 +27,9 @@ function SwitchRoutes() {
       <Route exact path="/bitcoin-prices" component={BitcoinPrices} />
       <Route exact path="/bit-prime" component={BitPrime} />
       <Route exact path="/atm-finder" component={AtmFinder} />
-      <Route path="/checkout" component={Checkout} />
+      <Route exact path="/checkout" component={Checkout} />
+      <Route path="/catalog" component={Catalog} />
+      <Route path="/pricing" component={Pricing} />
     </Switch>
   );
 }

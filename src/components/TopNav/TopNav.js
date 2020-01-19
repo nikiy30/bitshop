@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import Avatar from "../Avatar/Avatar";
 /**
  * Icon Import todo clean up imports
  */
@@ -17,7 +18,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
-import AccountCircle from "@material-ui/icons/AccountCircle";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
@@ -27,8 +27,17 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#232F3E",
     color: "white"
   },
+  nav: {
+    display: "flex",
+    paddingTop: "12px"
+  },
   grow: {
     flexGrow: 1
+  },
+  link: {
+    margin: theme.spacing(1, 1.5),
+    color: "#ffffff",
+    textDecoration: "none"
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -49,7 +58,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: "100%",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       marginLeft: theme.spacing(3),
       width: "auto"
     }
@@ -159,14 +168,7 @@ export function TopNav() {
         <p>Notifications</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
+        <Avatar />
         <p>Profile</p>
       </MenuItem>
       <ShoppingCartIcon />
@@ -204,7 +206,33 @@ export function TopNav() {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Link to="/checkout">
+            <nav className={classes.nav}>
+              <Link
+                variant="button"
+                color="textPrimary"
+                to="/catalog"
+                className={classes.link}
+              >
+                Catalog
+              </Link>
+              <Link
+                variant="button"
+                color="textPrimary"
+                to="/pricing"
+                className={classes.link}
+              >
+                Enterprise
+              </Link>
+              <Link
+                variant="button"
+                color="textPrimary"
+                href="#"
+                className={classes.link}
+              >
+                Support
+              </Link>
+            </nav>
+            <Link to="/checkout" variant="button" className={classes.link}>
               <IconButton aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={4} color="secondary">
                   <ShoppingCartIcon />
@@ -225,7 +253,7 @@ export function TopNav() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <Avatar />
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
